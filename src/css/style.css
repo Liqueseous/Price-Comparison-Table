@@ -1,0 +1,14 @@
+.table-header {
+    background-color:rgb(43, 41, 41);
+    color:white;
+}
+.entry-form {
+    width: 100%;
+    text-align:center;
+    display: flex;
+    display: -webkit-flex;
+}
+.entry-form:first-child {
+    width:70%;
+    min-width:200px;
+}

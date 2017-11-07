@@ -3,6 +3,7 @@ import Table from './table';
 import Form from './form';
 import logo from '../logo.svg';
 import '../css/App.css';
+import '../css/style.css';
 
 class App extends Component {
   constructor() {
