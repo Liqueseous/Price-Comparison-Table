@@ -4,22 +4,24 @@ class table extends Component {
 	render(){
 		return(
 			<div>
-				<table className="table table-hover table-bordered table-condensed">
-					<tbody>
-						<tr>
-							<td className="table-header">
-							MPG ↓ - Cost →
-							</td>
-							{this.props.entries.map((e,key) => 
-								<td key={key} className="table-header">
-									{e.cost}
-								</td>
-							)}
-						</tr>
+				<table className="table table-hover table-bordered table-condensed table-responsive">
+					
+						<thead className="thead-dark">
+							<tr>
+								<th>
+								</th>
+								{this.props.entries.map((e,key) => 
+									<th key={key}>
+										$ {e.cost}
+									</th>
+								)}
+							</tr>
+						</thead>
+					<tbody>	
 						{this.props.entries.map((e,key) => 
 							<tr key={key}>
 								<td className="table-header">
-									{e.MPG}
+									{e.MPG} mpg
 								</td>
 							</tr>
 							)}

@@ -41,14 +41,22 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <form>
-          <input value={this.state.MPY} onChange={this.onChange} name="MPY" id="MPY" type="text" placeholder="Miles Per Year" />
-          <input value={this.state.PPG} onChange={this.onChange} name="PPG" id="PPG" type="text" placeholder="Price Per Gallon" />
-        </form>
-        <button className="btn btn-primary btn-lg" onClick={this.clicked}>Add Entry</button>
         <div className="content">
-          {this.state.formShow ? <Form createEntry={this.createEntry} clicked={this.clicked} /> :<p></p>}
-          
+          <form>
+            <div className="form-group">
+              <label htmlFor="MPY">Miles Per Year:</label>
+              <input className="form-control" value={this.state.MPY} onChange={this.onChange} name="MPY" id="MPY" type="text" placeholder="Miles Per Year" />
+            </div>
+            <div className="form-group">
+						  <label htmlFor="PPG">Price Per Gallon:</label>
+              <input className="form-control"value={this.state.PPG} onChange={this.onChange} name="PPG" id="PPG" type="text" placeholder="Price Per Gallon" />
+            </div>
+          </form>
+          <button className="btn btn-primary btn-lg" onClick={this.clicked}>Add Entry</button>
+            {this.state.formShow ? <Form createEntry={this.createEntry} clicked={this.clicked} /> :<p></p>}
+          <div className="alert alert-info">
+            <strong>Info!</strong> Verticle column represents MPG, horizontal row represents total cost of vehicle.
+          </div>
           <Table entries={this.state.entries} MPY={this.state.MPY} PPG={this.state.PPG}x/>
         </div>
       </div>
