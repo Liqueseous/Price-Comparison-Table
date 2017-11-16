@@ -83,7 +83,8 @@ class App extends Component {
       PPG = 0;
     } 
     //Dont need to worry about dividing by 0, validation is handling that
-    let vari = (((cost / parseFloat(this.state.MPY,10)) + ((parseFloat(this.state.PPG,10) / MPG)* parseFloat(this.state.MPY,10)))/ 12);
+    let vari = (((parseFloat(MPY,10) / parseFloat(MPG,10))* parseFloat(PPG,10))+ cost);
+    vari = vari / 12;
     if (vari < 0) {
       return 0;
     } else {
